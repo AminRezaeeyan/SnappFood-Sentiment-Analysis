@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  snappfood-sentiment:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./app:/app/app
+      - ./models:/app/models
+    restart: unless-stopped 
